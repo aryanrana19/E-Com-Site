@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | CompanyName</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="main-header">
+    <div class="container header-flex">
+        <div class="logo">
+            <h2>CompanyName</h2>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html" class="cart-btn">Cart</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- CHECKOUT -->
+<section class="checkout">
+    <div class="container">
+
+        <h1>Checkout</h1>
+
+        <div class="checkout-grid">
+
+            <!-- CUSTOMER DETAILS -->
+            <div class="checkout-form">
+                <h3>Billing Details</h3>
+
+                <form>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="text" placeholder="Phone Number" required>
+                    <input type="text" placeholder="Company Name">
+                    <input type="text" placeholder="Address">
+                    <input type="text" placeholder="City">
+                    <input type="text" placeholder="State">
+                    <input type="text" placeholder="Pincode">
+
+                    <button type="submit" class="btn">Place Order</button>
+                </form>
+            </div>
+
+            <!-- ORDER SUMMARY -->
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+
+                <p>Subtotal <span>₹ 20,700</span></p>
+                <p>GST <span>₹ 1,242</span></p>
+                <hr>
+                <h4>Total: ₹ 21,942</h4>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p>© 2026 Company Name. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

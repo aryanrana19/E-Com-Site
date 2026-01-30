@@ -1,0 +1,88 @@
+/* =========================
+   TABLET VIEW (<= 1024px)
+========================= */
+
+@media (max-width: 1024px) {
+
+    .product-detail-grid,
+    .cart-grid,
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header-flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}
+
+/* =========================
+   MOBILE VIEW (<= 768px)
+========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .category-grid,
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item img {
+        width: 100%;
+    }
+
+    .checkout-form,
+    .order-summary {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* =========================
+   SMALL MOBILE (<= 480px)
+========================= */
+
+@media (max-width: 480px) {
+
+    .logo h2 {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .page-title h1 {
+        font-size: 22px;
+    }
+}

@@ -1,3 +1,13 @@
+:root {
+    --primary: #2563eb;
+    --dark: #0f172a;
+    --light-bg: #f6f7f9;
+    --card-bg: #ffffff;
+    --shadow: 0 0 10px rgba(0,0,0,0.05);
+    --radius: 6px;
+}
+
+
 /* =====================
    GLOBAL STYLES
 ===================== */
@@ -31,7 +41,7 @@ a {
 ===================== */
 
 header {
-    background: #0f172a;
+    background: var(--dark);
     color: #fff;
     padding: 15px 0;
 }
@@ -79,12 +89,27 @@ nav a:hover {
 }
 
 .btn {
+    background: var(--primary);
+    color: white;
+    padding: 10px 22px;
+    border-radius: var(--radius);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
     display: inline-block;
-    padding: 10px 20px;
-    background: #2563eb;
-    color: #fff;
-    border-radius: 4px;
 }
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+
 
 /* =====================
    CATEGORIES
@@ -106,11 +131,11 @@ nav a:hover {
 }
 
 .category-card {
-    background: #fff;
+    background: var(--card-bg);
     padding: 25px;
     text-align: center;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 /* =====================
@@ -133,10 +158,12 @@ nav a:hover {
 }
 
 .product-card {
-    background: #fff;
+    background: var(--card-bg);
     padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    padding: 20px;
     text-align: center;
 }
 
@@ -163,13 +190,33 @@ nav a:hover {
     gap: 25px;
 }
 
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
 .nav-links li a {
     color: white;
     font-weight: 500;
 }
 
 .cart-btn {
-    background: #2563eb;
+    background: var(--primary);
     padding: 6px 12px;
     border-radius: 4px;
 }
@@ -180,7 +227,7 @@ nav a:hover {
 ===================== */
 
 footer {
-    background: #0f172a;
+    background: var(--dark);
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -207,6 +254,7 @@ footer {
     object-fit: cover;
     margin-bottom: 10px;
     border-radius: 4px;
+    transition: transform 0.3s ease;
 }
 
 .product-card .category {
@@ -235,7 +283,7 @@ footer {
 
 .product-image img {
     width: 100%;
-    border-radius: 6px;
+    border-radius: var(--radius);
 }
 
 .product-info h1 {
@@ -266,13 +314,13 @@ footer {
     gap: 15px;
 }
 
-.product-actions .btn {
+/* .product-actions .btn {
     padding: 10px 20px;
     cursor: pointer;
-}
+} */
 
 .product-actions .secondary {
-    background: #0f172a;
+    background: var(--dark);
 }
 
 
@@ -297,11 +345,11 @@ footer {
 .cart-item {
     display: flex;
     gap: 15px;
-    background: #fff;
+    background: var(--card-bg);
     padding: 15px;
     margin-bottom: 15px;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 .cart-item img {
@@ -326,11 +374,11 @@ footer {
 }
 
 .cart-summary {
-    background: #fff;
+    background: var(--card-bg);
     padding: 20px;
-    border-radius: 6px;
+    border-radius: var(--radius);
     height: fit-content;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    box-shadow: var(--shadow);
 }
 
 .cart-summary h3 {
@@ -347,11 +395,11 @@ footer {
     margin-top: 10px;
 }
 
-.cart-summary .btn {
+/* .cart-summary .btn {
     display: block;
     margin-top: 20px;
     text-align: center;
-}
+} */
 
 /* =====================
    CHECKOUT PAGE
@@ -372,10 +420,10 @@ footer {
 }
 
 .checkout-form {
-    background: #fff;
+    background: var(--card-bg);
     padding: 25px;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 .checkout-form h3 {
@@ -391,11 +439,11 @@ footer {
 }
 
 .order-summary {
-    background: #fff;
+    background: var(--card-bg);
     padding: 25px;
-    border-radius: 6px;
+    border-radius: var(--radius);
     height: fit-content;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    box-shadow: var(--shadow);
 }
 
 .order-summary p {
@@ -408,4 +456,28 @@ footer {
     margin-top: 10px;
 }
 
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
 
+.category-card,
+.product-card,
+.cart-item,
+.checkout-form,
+.order-summary {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-card:hover,
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
